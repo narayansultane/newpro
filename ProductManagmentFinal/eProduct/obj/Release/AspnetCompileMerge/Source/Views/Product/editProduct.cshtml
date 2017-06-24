@@ -1,0 +1,96 @@
+﻿@model ProjBO.ProductBO
+
+@{
+    ViewBag.Title = "editProduct";
+}
+<link href="~/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/style.css" rel="stylesheet" />
+<script src="~/js/jquery-1.11.1.min.js"></script>
+<script src="~/js/bootstrap.js"></script>
+<script src="~/js/responsiveslides.min.js"></script>
+ <div class="header">
+      <h2>Edit Product</h2>
+
+ </div>  
+<div class="AddProductForm">
+@using (Html.BeginForm("editProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    
+            <img alt="" src="@Html.DisplayTextFor(model => model.imagePath)" height="200px" width="200px" />  
+        
+        
+<table>
+     
+
+
+    <tr style="display:none;">
+        <td>
+             @Html.LabelFor(model => model.ProdId)
+        </td>
+        <td>
+             @Html.TextBoxFor(model => model.ProdId)
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Name)
+        </td>
+        <td>     
+             @Html.TextBoxFor(model => model.Name)
+             @Html.ValidationMessageFor(model => model.Name)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Category)
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Category)
+            @Html.ValidationMessageFor(model => model.Category)
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.Price)
+        </td>
+        <td>
+             @Html.TextBoxFor(model => model.Price)
+             @Html.ValidationMessageFor(model => model.Price)
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>    
+            @Html.LabelFor(model => model.Description) 
+        </td>
+        <td>
+            @Html.TextBoxFor(model => model.Description)@Html.ValidationMessageFor(model => model.Description)
+        </td>
+    </tr>
+     
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.imagePath)
+         </td>
+        <td>
+            <input id="file" name="file" type="file" /> 
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td class="ErrorMsz">@TempData["errorMsg"]</td>
+
+    </tr>
+
+
+</table>
+
+<button type ="submit" value="Edit" class="btn btn-primary">Edit Product</button>
+
+}
+</div>

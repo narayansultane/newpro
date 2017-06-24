@@ -1,0 +1,96 @@
+﻿MainContainer {
+    height:100px;
+    width:200px;
+}
+
+.header {
+      margin: 0 150px 0 150px;
+      border: solid 1px;
+      background-color: maroon;
+     
+}
+
+    .header a {
+     color:white !Important;
+    }
+.header h2{
+      background-color: blanchedalmond;
+      color: maroon;
+}
+.grid {
+    
+    margin: 0 150px 150px 150px;
+    border: solid 1px;
+    padding: 15px;
+}
+
+.col-sm-4 {
+margin-bottom: 20px;
+
+}
+
+.desc {
+     word-break: break-all;
+}
+.Grid .row {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.header h2 {
+text-align:center;
+font:bold 50px medium;
+font-family:Calibri;
+color:GrayText;
+
+}
+
+.bg-image {
+    height: 45px;
+    width: 45px;
+    background-image:
+    url("../image/plus.jpg");
+    background-size: 45px 45px;
+}
+
+input, button, select, textarea {
+    font-family: initial;
+    font-size: medium;
+    line-height: normal;
+    margin: 4px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+#ProductBlock{
+    
+    margin-left: 0px;
+    background-color: mediumaquamarine;
+}
+.ErrorMsz {
+   color:red;
+       
+}
+
+
+.AddProductForm{
+    margin-left: 471px;
+    margin-top: 85px;
+}
+
+
+.login {
+    border:solid 1px;
+    text-align:center;
+margin:90px 450px;
+}
+
+.message {
+
+color:red;
+}

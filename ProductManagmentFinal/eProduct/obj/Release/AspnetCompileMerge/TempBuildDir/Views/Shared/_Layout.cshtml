@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery-1.11.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+   </head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("U R Site Name ", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">             
+
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header wow fadeInLeft animated animated" data-wow-delay="0.4s">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1><a class="navbar-brand" href="index.html"><img src="images/e.png" /> Flat Gym</a></h1>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right wow fadeInRight animated animated" data-wow-delay="0.4s">
+
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Classes", "Classes", "Classes")</li>
+                                <li>@Html.ActionLink("Trainers", "Trainers", "Trainers")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Login", "login", "Login")</li>
+                              
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer-section">
+                <div class="container">
+                    <div class="footer-grids">
+                        <div class="col-md-3 footer-grid wow fadeInDownBig animated animated" data-wow-delay="0.4s">
+                            <h4>About</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipig elit. Praesent vestibulummolestie lacus. Aenean nonummy hendrerit mauris. Praesent vestibulummolestie lacus.</p>
+                        </div>
+                        <div class="col-md-3 footer-grid wow fadeInLeft animated animated" data-wow-delay="0.4s">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li>Beauty</li>
+                                <li>Diet & Fitness</li>
+                                <li>Lifestyle</li>
+                                <li>Help Desk</li>
+                                <li>Pregnancy</li>
+                                <li>Performance Metrics</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 footer-grid wow fadeInUpBig animated animated" data-wow-delay="0.4s">
+                            <h4>Work</h4>
+                            <ul>
+                                <li>Customer Support</li>
+                                <li>Platinum Support</li>
+                                <li>Gold Support</li>
+                                <li>Training</li>
+                                <li>Workshops</li>
+                                <li>Online Training</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 footer-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
+                            <h4>Contact</h4>
+                            <p>7801 Marmora Road</p>
+                            <p>Glasgow, DO5 98GR.</p>
+                            <p>Freephone: +1 800 558 8990</p>
+                            <p>Telephone: +1 659 803 9035</p>
+                            <p>FAX: + 1 314 889 9898</p>
+                            <a href="mailto:example@mail.com"> example@mail.com</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!---footer--->
+            <!--copy-->
+            <div class="copy-section wow fadeInDownBig animated animated" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="social-icons">
+                        <a href="#"><i class="icon"></i></a>
+                        <a href="#"><i class="icon1"></i></a>
+                        <a href="#"><i class="icon2"></i></a>
+                        <a href="#"><i class="icon3"></i></a>
+                    </div>
+                    <p>&copy; 2016 Flat Gym . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>

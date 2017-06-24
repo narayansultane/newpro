@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ProjBO.ProductBO>
+
+@{
+    ViewBag.Title = "getAllProd";
+}
+
+
+
+<html>
+<head>
+    <title>Flat Gym a Sports Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+    <!---css--->
+    <link href="~/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/css/style.css" rel='stylesheet' type='text/css' />
+    <!---css--->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Flat Gym  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!---js--->
+    <script src="~/js/jquery-1.11.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <!---js--->
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!--//web-fonts-->
+    <!--JS for animate-->
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="~/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+</head>
+<body>
+    <!---header--->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header wow fadeInLeft animated animated" data-wow-delay="0.4s">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a class="navbar-brand" href="index.html"><img src="images/e.png" />  Flat Gym </a></h1>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right wow fadeInRight animated animated" data-wow-delay="0.4s">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Classes", "Classes", "Classes")</li>
+                    <li>@Html.ActionLink("Trainers", "Trainers", "Trainers")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Login", "login", "Login")</li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="about-section w3-layouts">
+        <div class="container">
+            <div class="Grid">
+                <br/><br /><br /><br />
+                <div style="text-align:right; font-size:1.5em">
+                   @Html.ActionLink("ADD PRODUCT", "Create")
+                    @Html.ActionLink("Logout", "Logout", "Login")
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="gym-product w3-agile">
+        <div class="container">
+            <h3>Products of gym</h3>
+            <div class="product-grids">
+                @foreach (var item in Model)
+                    {
+                <div class="col-md-4 product-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
+                    
+                    <img src="@item.imagePath" class="img-responsive" alt="" />
+                    <b class="label label-default">@Html.DisplayNameFor(model => model.Name)</b>:@Html.ActionLink(item.Name, "editProduct", new { id = item.ProdId })<br/>                  
+                    <b class="label label-default desc">@Html.DisplayNameFor(model => model.Description):</b>@Html.DisplayFor(modelItem => item.Description)<br/>
+                    <div> <b>@Html.ActionLink("Delete", "DeleteProduct", new { id = item.ProdId }, new { onclick = "return confirm('Are you sure you wish to delete this Product?');" })</b></div>
+                </div>
+                
+                }
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+  
+    
+    
